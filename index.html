@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Robot Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="gameShell">
+    <canvas id="game" width="1200" height="700"></canvas>
+
+    <section id="menu" class="panel">
+      <h1>ROBOT RUNNER</h1>
+      <p>Select your character</p>
+      <div class="characters">
+        <button data-character="TONMOY"><img src="images/TONMOY.png"><b>TONMOY</b><span>Triple Jump</span></button>
+        <button data-character="APON"><img src="images/APON.png"><b>APON</b><span>Speed Boost</span></button>
+        <button data-character="TAHMID"><img src="images/TAHMID.png"><b>TAHMID</b><span>4 HP</span></button>
+      </div>
+      <p class="help">PC: A/D or ←/→ · W/↑ Jump · Space Jet · F Attack · P Pause</p>
+      <p class="help">Mobile: use the on-screen buttons.</p>
+    </section>
+
+    <div id="mobileControls" aria-label="Mobile controls">
+      <button class="move-left" data-key="left" aria-label="Move left">◀</button>
+      <div class="rightControls">
+        <button class="jump" data-key="jump" aria-label="Jump">⬆</button>
+        <div class="attackRow">
+          <button data-key="attack" aria-label="Attack">⚔</button>
+          <button data-key="jet" aria-label="Jet attack">⚡</button>
+          <button data-key="right" aria-label="Move right">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="gameOverPanel" class="gameOverPanel" aria-hidden="true">
+      <div class="gameOverCard">
+        <div class="gameOverTitle">GAME OVER</div>
+        <div id="gameOverDialogue" class="gameOverDialogue"></div>
+        <div id="gameOverStats" class="gameOverStats"></div>
+        <button id="restartButton" class="restartButton" type="button">↻</button>
+        <div class="restartHint">RESTART</div>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
